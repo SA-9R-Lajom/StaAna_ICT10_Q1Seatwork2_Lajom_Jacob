@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Midnight Tokyo Brewery - Neon Menu</title>
+    
+    <style>   
+        body {
+            background: radial-gradient (#0d0d0d 0%, #1a1a1a 100%);
+            color: #b51212;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            padding: 22px;
+
+        }
+
+    .header {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+    .header .restaurant-icon {
+      font-size: 3rem;
+      color: #1ac9b8;
+      text-shadow: 0 0 15px, #0ff;
+      margin-bottom: 10px;
+      animation: glow 2s infinite alternate;
+    }
+    .header h1 {
+      font-weight: 800;
+      font-size: 2.8rem;
+      margin-top: 10px;
+      color: #0ff;
+      text-shadow: 0 0 12px, #0ff, 0 0 24px, #00e5ff;
+    }
+    .header .sub {
+      color: #bbb;
+    }
+
+    .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 18px;
+    }
+
+    .menu-card {
+       background: #171717;
+       border-radius: 16px;
+       padding: 20px;
+       text-align: center;
+       box-shadow:  0 0 20px rgba(0, 255, 255, 0.3);
+        
+    }
+
+    .menu-card h5 {
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    .menu-card .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #0ff;
+    }
+
+     .opening-hours {
+      margin-top: 30px;
+      text-align: center;
+      font-style: italic;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 15px;
+      border-radius: 12px;
+    }
+
+    .badge-custom {
+      display: inline-block;
+      background: linear-gradient(45deg, #00FFFF, #00e5ff);
+      color: #111;
+      font-weight: bolder;
+      padding: 10px 20px;
+      border-radius: 50px;
+      box-shadow: 0 0 15px #0ff;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+  
+    <div class="header">
+      <i class="fas fa-mug-hot restaurant-icon"></i>
+      <h1 id="name1"></h1>
+      <p id="owner" class="sub"></p>
+      <small id="since"></small>
+    </div>
+
+    <div class="menu-grid">
+      <div class="menu-card">
+        <h5 id="prod1"></h5>
+
+        <p class="price" id="price1"></p>
+      </div>
+
+      <div class="menu-card">
+        <h5 id="prod2"></h5>
+
+        <p class="price" id="price2"></p>
+      </div>
+
+      <div class="menu-card">
+        <h5 id="prod3"></h5>
+
+        <p class="price" id="price3"></p>
+      </div>
+
+      <div class="menu-card">
+        <h5 id="prod4"></h5>
+
+        <p class="price" id="price4"></p>
+      </div>
+
+      <div class="menu-card">
+        <h5 id="prod5"></h5>
+
+        <p class="price" id="price5"></p>
+      </div>
+    </div>
+
+    <div class="opening-hours">
+      <i class="fas fa-clock me-2"></i>
+      <span id="openingHours"></span>
+    </div>
+
+    <div class="text-center">
+      <span id="orderType" class="badge-custom"></span>
+    </div>
+  </div>
+
+  <script type="py" src="main.py"></script>
+</body>
+</html>
+ 
